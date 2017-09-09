@@ -53,5 +53,22 @@
 				"prodi" => "KOMSI"
 			)
 		);
+		
+		// var_dump($mahasiswa);
+		
+		// sorting by key
+		$arr = array();
+		foreach ($mahasiswa as $items) {
+			foreach ($items as $key => $val) {
+				if(!isset($arr[$key])) {
+					$arr[$key] = array();
+				}
+				$arr[$key][] = $val;
+			}
+		}
+		
+		$orderby = "nama"; // tinggal diganti sesuai key yang ingin disorting
+		
+		array_multisort($arr[$orderby], SORT_ASC, $mahasiswa);
 	?>
 </body>
