@@ -1,3 +1,45 @@
+<head>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif, "tahoma";
+		}
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		
+		th {
+			height: 50px;
+			text-align: center;
+			background-color: #4CAF50;
+			color: white;
+		}
+		
+		td {
+			height: 40px;
+			vertical-align: bottom;
+		}
+		
+		th, td {
+			padding: 10px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+		
+		tr:nth-child(even) {background-color: #f2f2f2}
+		
+		#container {
+			width: 700px;
+			margin: 30px auto;
+		}
+		
+		h1 {
+			text-align: center
+		}
+	</style>
+</head>
 <body>
 	<?php
 		$mahasiswa = array(
