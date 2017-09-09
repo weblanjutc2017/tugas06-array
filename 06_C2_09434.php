@@ -71,4 +71,34 @@
 		
 		array_multisort($arr[$orderby], SORT_ASC, $mahasiswa);
 	?>
+	<div id="container">
+	<h1>10 DAFTAR MAHASISWA BERPRESTASI</h1>
+		<table>
+			<tr>
+				<th>No</th>
+				<th>NIM</th>
+				<th>Nama</th>
+				<th>Kelas</th>
+				<th>Prodi</th>
+			</tr>
+			<?php
+				//perulangan untuk setiap baris - vertical
+				foreach ($mahasiswa as $items) {
+					static $i = 1;
+					echo "<tr>";
+					echo "<td>" . $i . "</td>"; 
+					
+					// perulangan untuk setiap kolow - horizontal
+					// cetak : 8444 HILMAWAN KHIBATUL C2 KOMSI
+					foreach ($items as $key => $val) {
+						echo "<td>" . $val . "</td>";
+					}
+					
+					$i++;
+					echo "</tr>";
+			}
+			// var_dump($mahasiswa);
+			?>
+		</table>
+	</div>
 </body>
